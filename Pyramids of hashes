@@ -1,0 +1,33 @@
+#include <cs50.h>
+#include <stdio.h>
+
+
+int main(void)
+
+{
+    int n, y, x, u;
+    do
+    {
+        do
+        {
+            n = get_int("Insert pyramid hight from 1 to 8: ");
+        } 
+        while (n < 1 || n > 8);
+       
+        for (x = 0; x < n; x++)
+        { 
+            for (u = (n - 1); u > x; u--)
+            {
+                printf(" ");
+            }
+            for (u = 0; u <= x; u++)
+            {   
+                printf("#");
+            }
+            printf("\n");
+       
+        }
+    }
+    while (n > 0 && n < 9);
+        
+}
